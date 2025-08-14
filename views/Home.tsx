@@ -6,11 +6,11 @@ import {
   } from '@react-navigation/native';
   import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function Home(){
+ export default function Home(){
     const navigation = useNavigation();
     return(
         <View style={styles.bloco}>
-                <Text style={styles.Texto}>Seja bem Vindo</Text>
+                <Text style={styles.Texto}>Seja bem vindo</Text>
 
                 <TouchableOpacity 
                     style={styles.btn}
@@ -18,9 +18,33 @@ export default function Home(){
                 >
                     <Text style={styles.textoBtn}>Itanhaém</Text>
                 </TouchableOpacity>
+
+                 <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Gaivota' as never)}
+                >
+                    <Text style={styles.textoBtn}>Gaivota</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Peruibe' as never)}
+                >
+                    <Text style={styles.textoBtn}>Peruibe</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Saopaulo' as never)}
+                >
+                    <Text style={styles.textoBtn}>São Paulo</Text>
+                </TouchableOpacity>
         </View>
-    );
+    )
 } 
+
+
+
 
 const styles = StyleSheet.create({
     bloco:{
